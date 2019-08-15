@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let select = document.getElementById('select');
     let deploy = document.getElementById('deploy');
-    const developURL = "curl https://forge.laravel.com/servers/137842/sites/806322/deploy/http?token=sMUWfQdoftQ3Zj3ZtfCbiXp1pJIT6vPG65PeuVZv";
+    const developURL = "https://forge.laravel.com/servers/137842/sites/806322/deploy/http?token=sMUWfQdoftQ3Zj3ZtfCbiXp1pJIT6vPG65PeuVZv";
 
-    const masterURL = "curl https://forge.laravel.com/servers/137842/sites/697985/deploy/http?token=G8traj5bQRM75S5CVaqqFXmQ6lSVeGvqczhHvnPL";
+    const masterURL = "https://forge.laravel.com/servers/137842/sites/697985/deploy/http?token=G8traj5bQRM75S5CVaqqFXmQ6lSVeGvqczhHvnPL";
 
     deploy.addEventListener('click', function () {
         let server = select[select.selectedIndex].value;
@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
             curl(developURL);
         }
     });
+
+    /* 
+        Haven't figured out how to post the curl yet, take a look
+    */
 
     function curl(url) {
         const rawResponse = fetch(url, {
