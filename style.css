@@ -1,179 +1,180 @@
 /* Modal Structure */
+
 html,
 body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  margin: 0;
-  min-height: 180px;
-  padding: 0;
-  width: 384px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    margin: 0;
+    min-height: 180px;
+    padding: 0;
+    width: 384px;
 }
 
 h1 {
-  font-family: "Menlo", monospace;
-  font-size: 22px;
-  font-weight: 400;
-  margin: 0;
-  color: #9c6aae;
+    font-family: "Menlo", monospace;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+    color: #9c6aae;
 }
 
 a:link,
 a:visited {
-  color: #000000;
-  outline: 0;
-  text-decoration: none;
+    color: #000000;
+    outline: 0;
+    text-decoration: none;
 }
 
 img {
-  width: 70px;
+    width: 70px;
 }
 
 .modal-header {
-  align-items: center;
-  border-bottom: 0.5px solid #dadada;
-  padding: 0;
+    align-items: center;
+    padding: 0;
+    border: 0 !important;
 }
 
 .modal-content {
-  padding: 15px;
-  border: none;
-  border-top: 1px solid #80808059;
-  border-radius: 0;
+    padding: 15px;
+    border: none;
+    border-radius: 0;
+    background: #f3f3f3;
+    border: 0 !important;
 }
 
 .modal-icons {
-  border-top: 0.5px solid #dadada;
-  height: 50px;
-  width: 100%;
+    border-top: 0.5px solid #dadada;
+    height: 50px;
+    width: 100%;
 }
 
 .logo {
-  padding: 16px;
+    padding: 16px;
 }
 
 .logo-icon {
-  vertical-align: text-bottom;
-  margin-right: 12px;
-  width: 28px;
+    vertical-align: text-bottom;
+    margin-right: 12px;
+    width: 28px;
 }
 
 .version {
-  color: #444;
-  font-size: 18px;
+    color: #444;
+    font-size: 18px;
 }
 
 .flex-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 22px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 22px;
 }
 
 .flex {
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
-  width: 120px;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .flex:hover {
-  opacity: 0.4;
+    opacity: 0.4;
 }
 
 .flex .fa {
-  font-size: 40px;
-  color: #9c6aae;
+    font-size: 40px;
+    color: #9c6aae;
 }
 
 input.form-control {
-  height: 2rem !important;
-  width: 40% !important;
+    height: 2rem !important;
+    width: 40% !important;
 }
 
-.input-group > .custom-file,
-.input-group > .custom-select,
-.input-group > .form-control,
-.input-group > .form-control-plaintext {
-  position: relative;
-  -ms-flex: 1 1 auto;
-  width: 1%;
-  margin-bottom: 0;
+.input-group>.custom-file,
+.input-group>.custom-select,
+.input-group>.form-control,
+.input-group>.form-control-plaintext {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
 }
 
 .input-group-prepend {
-  height: 2rem !important;
+    height: 2rem !important;
 }
 
 .btn {
-  background: #9c6aae;
-  color: white;
-  font-size: 13px;
-  border-radius: 0 5px 5px 0;
-  line-height: 1rem;
-  height: 2rem;
-  min-width: 70px;
+    background: #9c6aae;
+    color: white;
+    font-size: 13px;
+    border-radius: 0 5px 5px 0;
+    line-height: 1rem;
+    height: 2rem;
+    min-width: 70px;
 }
 
 .btn:hover {
-  background: #9155a7;
-  color: white;
+    background: #9155a7;
+    color: white;
 }
 
 .deploy {
-  width: 49%;
-  margin: auto;
+    width: 49%;
+    margin: auto;
 }
 
 .btn-group {
-  display: block !important;
+    display: block !important;
 }
 
 .custom-select {
-  height: 2rem;
-  padding: 0 10px;
+    height: 2rem;
+    padding: 0 10px;
 }
 
 #myInput {
-  background-image: url("/css/searchicon.png");
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
+    background-image: url("/css/searchicon.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
 }
 
 #myTable {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 10px;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 10px;
 }
 
 #myTable th,
 #myTable td {
-  text-align: center;
-  margin: 5px 0 !important;
+    text-align: center;
+    margin: 5px 0 !important;
 }
 
 th {
-  width: 20% !important;
-  display: inline-table;
+    width: 20% !important;
+    display: inline-table;
 }
 
 td {
-  width: 17% !important;
-  display: inline-table;
+    width: 17% !important;
+    display: inline-table;
 }
 
 #myTable tr {
-  border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 #myTable tr.header,
 #myTable tr:hover {
-  background-color: #9c6aae4a;
+    background-color: #9c6aae4a;
 }
 
 .flex-container,
 .modal-header {
-  background: #f3f3f3;
+    background: #f3f3f3;
 }
