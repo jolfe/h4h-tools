@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Traversy Media Quick Launcher</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        /* Modal Structure */
+        html,
+        body {
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            margin: 0;
+            min-height: 180px;
+            padding: 0;
+            width: 384px;
+        }
+
+        h1 {
+            font-family: "Menlo", monospace;
+            font-size: 22px;
+            font-weight: 400;
+            margin: 0;
+            color: #9c6aae;
+        }
+
+        a:link,
+        a:visited {
+            color: #000000;
+            outline: 0;
+            text-decoration: none;
+        }
+
+        img {
+            width: 70px;
+        }
+
+        .modal-header {
+            align-items: center;
+            border-bottom: 0.5px solid #dadada;
+        }
+
+        .modal-content {
+            padding: 20px;
+        }
+
+        .modal-icons {
+            border-top: 0.5px solid #dadada;
+            height: 50px;
+            width: 100%;
+        }
+
+        .logo {
+            padding: 16px;
+        }
+
+        .logo-icon {
+            vertical-align: text-bottom;
+            margin-right: 12px;
+            width: 28px;
+        }
+
+        .version {
+            color: #444;
+            font-size: 18px;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 22px;
+        }
+
+        .flex {
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+            width: 120px;
+        }
+
+        .flex:hover {
+            opacity: 0.4;
+        }
+
+        .flex .fa {
+            font-size: 40px;
+            color: #9c6aae;
+        }
+
+        input.form-control {
+            height: 2rem !important;
+            width: 40% !important;
+        }
+
+        .input-group>.custom-file,
+        .input-group>.custom-select,
+        .input-group>.form-control,
+        .input-group>.form-control-plaintext {
+            position: relative;
+            -ms-flex: 1 1 auto;
+            width: 1%;
+            margin-bottom: 0;
+        }
+
+        .input-group-prepend {
+            height: 2rem !important;
+        }
+
+        .btn {
+            background: #9c6aae;
+            color: white;
+            font-size: 13px;
+            border-radius: 0 5px 5px 0;
+            line-height: 1rem;
+            height: 2rem;
+            min-width: 70px;
+        }
+
+        .btn:hover {
+            background: #9155a7;
+            color: white;
+        }
+
+        .deploy {
+            width: 49%;
+            margin: auto;
+        }
+
+        .btn-group {
+            display: block !important;
+        }
+
+        .custom-select {
+            height: 2rem;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal-header">
+        <h1 class="logo">
+            <img class="logo-icon" src="images/logo.png" />
+            H4H Tools
+            <span class="version">(1.0.0)</span>
+        </h1>
+    </div>
+    <div class="modal-content">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Site ID</span>
+            </div>
+            <input class="form-control" aria-label="Site ID" id="id"></input>
+            <button class="btn" id="go">Go</button>
+        </div>
+        <br>
+        <div class="input-group">
+            <select class="custom-select" id="select">
+                <option value="Develop" selected id="develop">Develop</option>
+                <option value="Master" id="master">Master</option>
+            </select>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="deploy">Deploy</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-icons">
+        <div class="flex-container">
+            <div class="flex">
+                <a href="https://crm.zoho.com/crm/org4700770/tab/Home/begin" target="_blank">
+                    <img src="images/zoho-crm.png"></img>
+                </a>
+            </div>
+            <div class="flex">
+                <a href="https://groups.alliancereservations.com/v1/UserDashboard.aspx" target="_blank">
+                    <img src="images/arn-groups.png"></img>
+                </a>
+            </div>
+            <div class="flex">
+                <a href="https://skins.alliancereservations.com/skins/edit" target="_blank">
+                    <img src="images/skin-editor.png"></img>
+                </a>
+            </div>
+            <div class="flex">
+                <a href="https://github.com/Hotels4Hope" target="_blank">
+                    <img src="images/h4h-github.png"></img>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="js/h4h_tools.js"></script>
+
+
+</html>
