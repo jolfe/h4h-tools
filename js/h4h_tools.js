@@ -33,4 +33,27 @@ document.addEventListener('DOMContentLoaded', function () {
         const response = rawResponse.json();
         console.log(response);
     }
+
+    let search = document.getElementById('myInput');
+    search.addEventListener("keyup", event => {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr"),
+            th = table.getElementsByTagName("th");
+
+        for (i = 1; i < tr.length; i++) {
+            tr[i].style.display = "none";
+            for (var j = 0; j < th.length; j++) {
+                td = tr[i].getElementsByTagName("td")[j];
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter.toUpperCase()) > -1) {
+                        tr[i].style.display = "";
+                        break;
+                    }
+                }
+            }
+        }
+    });
 });
