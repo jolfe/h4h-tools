@@ -103,8 +103,9 @@ img {
 .resultsDiv {
   font-size: 12px;
   position: absolute;
-  right: 3rem;
+  right: 2.8rem;
   bottom: 0;
+  width: 5rem;
 }
 
 input.form-control {

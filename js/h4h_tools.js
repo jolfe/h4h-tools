@@ -34,7 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         }
-        results.innerHTML = count + ' <a class="gray">result(s)</a>';
+        if (count === 1) {
+            results.innerHTML = count + ' <a class="gray">result</a>';
+        } else {
+            results.innerHTML = count + ' <a class="gray">results</a>';
+        }
     });
 
     function includeHTML() {
