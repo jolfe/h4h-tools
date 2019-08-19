@@ -4,9 +4,11 @@
 <head>
     <title>H4H Tools</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -25,14 +27,14 @@
             <button class="btn" id="go">Go</button>
         </div>
         <br>
-        <div class="input-group" style="padding: 0;">
-            <input class="form-control" style="width: 30%; margin: 0;" type="text" placeholder="Search table" id="myInput"></input>
+        <div class="input-group" style="width: 70%;">
+            <input class="form-control" style="width: 30%; margin: 0;" type="text" placeholder="Search table"
+                id="myInput"></input>
         </div>
         <div class="resultsDiv">
             <p class="results"></p>
         </div>
     </div>
-
     <table class="myTable">
         <tr class="header">
             <th>Index</th>
@@ -42,15 +44,8 @@
             <th>Group ID</th>
         </tr>
     </table>
-    <div class="modal-content" style="overflow-y: scroll;
-    height: 17rem; padding: 0; -webkit-box-shadow: inset 0px 0px 34px -14px rgba(176,176,176,1);
--moz-box-shadow: inset 0px 0px 34px -14px rgba(176,176,176,1);
-box-shadow: inset 0px 0px 34px -14px rgba(176,176,176,1);
-">
-
-        <div w3-include-html="table.html"></div>
-
-
+    <div class="modal-content box-shadow">
+        <div include-html="table.html"></div>
     </div>
     <div class="modal-icons">
         <div class="flex-container">
