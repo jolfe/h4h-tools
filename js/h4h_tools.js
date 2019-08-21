@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
         table = document.getElementById("myTable");
+        console.log(table)
         tr = table.getElementsByTagName("tr"),
             th = table.getElementsByTagName("th");
 
@@ -67,4 +68,102 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
+
+    let url = 'https://spreadsheets.google.com/feeds/cells/1wFkbK95RwTFKsVzErkX75cnyWS93s8UdFt7kZa7bqsk/1/public/values?alt=json';
+
+    function init_Table() {
+        $.ajax({
+            url: url,
+            type: 'GET',
+            success: function (resp) {
+                output = resp;
+                doData(output);
+            },
+            error: function (e) {
+                alert('Error: ' + e);
+            }
+        });
+    }
+
+    var spData = null;
+
+    function doData(json) {
+        spData = json.feed.entry;
+        readData($("#data"));
+    }
+
+    function drawHeader() {
+        let trs = document.querySelectorAll('tr');
+        let tr = trs[0];
+        tr.classList.add('header');
+        for (i = 1; i < trs.length; i++) {
+            trs[i].classList.add('main');
+        }
+    }
+
+    function drawCell(tr, val) {
+        var td = $("<td/>");
+        var th = $("<th/>");
+        tr.append(td);
+        td.append(val);
+        return td;
+    }
+
+    function replaceNone() {
+        let tds = document.querySelectorAll('td');
+        tds.forEach(function (td) {
+            if (td.innerHTML === 'N/A') {
+                td.innerHTML = '';
+            }
+        })
+    }
+
+    function hyperlink() {
+        let tds = document.querySelectorAll('td');
+        tds.forEach(function (td) {
+            if (td.innerHTML.includes('http')) {
+                td.innerHTML = '<a href="' + td.innerHTML + '">Link</a>';
+            }
+        })
+    }
+
+    function drawRow(table, rowData) {
+        if (rowData == null) return null;
+        if (rowData.length == 0) return null;
+        var tr = $("<tr/>");
+        table.append(tr);
+        for (var c = 0; c < rowData.length; c++) {
+            drawCell(tr, rowData[c]);
+        }
+        return tr;
+    }
+
+    function drawTable(parent) {
+        var table = $('<table id="myTable" />');
+        parent.append(table);
+        return table;
+    }
+
+    function readData(parent) {
+        var data = spData;
+        var table = drawTable(parent);
+        var rowData = [];
+
+        for (var r = 0; r < data.length; r++) {
+            var cell = data[r]["gs$cell"];
+            var val = cell["$t"];
+            if (cell.col == 1) {
+                drawRow(table, rowData);
+                rowData = [];
+            }
+            rowData.push(val);
+        }
+        drawRow(table, rowData);
+        drawHeader();
+        replaceNone();
+        hyperlink();
+    }
+    $(document).ready(function () {
+        init_Table();
+    });
 });

@@ -9,6 +9,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -35,17 +36,8 @@
             <p class="results"></p>
         </div>
     </div>
-    <table class="myTable">
-        <tr class="header">
-            <th>Index</th>
-            <th>Site ID</th>
-            <th>Site Name</th>
-            <th>Affiliate ID</th>
-            <th>Group ID</th>
-        </tr>
-    </table>
     <div class="modal-content box-shadow">
-        <div include-html="table.html"></div>
+        <div id="data"></div>
     </div>
     <div class="modal-icons">
         <div class="flex-container">
